@@ -1,7 +1,13 @@
+* {
+    box-sizing: border-box;
+}
+
+
 :root {
     --font-name: "Roboto Mono", monospace, "sans-sans";
     --font-color-primary: #FCE7C5; 
     --font-color-secondary: #FA7070;
+    --bg-color-primary: 143,140,233;
     --btn-color-primary: #FFA253;
 }
 
@@ -52,6 +58,7 @@ a {
 }
 
 .btn {
+    border-radius: 5px;
     font-weight: 500;
     font-family: var(--font-name);
     cursor: pointer;
@@ -61,7 +68,6 @@ a {
 .btn-primary {
     background-color: var(--btn-color-primary);
     color: black;
-    border-radius: 5px;
 }
 
 .btn-primary:hover {
