@@ -1,3 +1,5 @@
+let path = window.location.search;
+
 document.addEventListener('DOMContentLoaded', function() {
     const addMovie = document.getElementById("addMovie-form");
 
@@ -12,6 +14,7 @@ document.addEventListener('DOMContentLoaded', function() {
         xhr.onload = function() {
             const response = xhr.response;
             console.log(response);
+            window.location.href = `../pages/admin-dashboard.php${path}`;
         }
 
         xhr.send(formData);
@@ -21,5 +24,5 @@ document.addEventListener('DOMContentLoaded', function() {
 const cancelBtn = document.getElementById("cancel");
 
 cancelBtn.addEventListener("click", function() {
-    window.location.href = "../pages/admin-dashboard.php";
+    window.location.href = `../pages/admin-dashboard.php${path}`;
 });
